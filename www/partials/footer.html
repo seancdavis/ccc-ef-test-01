@@ -27,11 +27,17 @@
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-content {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-text {
@@ -51,6 +57,14 @@
     display: inline-block;
     text-decoration: none;
     color: inherit;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .ascii-art:hover {
+    text-decoration: none;
+    animation: none;
+    transform: scale(1.05);
   }
 
   .ascii-art pre {
@@ -86,17 +100,11 @@
     text-decoration: underline;
   }
 
-  /* Simple animation for the ASCII art */
+  /* Pulse animation for the ASCII art */
   @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.02);
-    }
-    100% {
-      transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
   }
 
   .ascii-art {
