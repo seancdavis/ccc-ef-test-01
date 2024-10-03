@@ -24,11 +24,13 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 
     <!-- TODO: Add your name to enter the prize draw -->
-    <!-- <meta name="author" content="YOUR NAME"> -->
+    <meta name="author" content="Niklas Vatn">
 
     <!-- TODO: Add your email and we'll show an avatar in the leaderboard. (And
     you'll get more points!) -->
-    <!-- <meta name="email" content="YOUR EMAIL ADDRESS"> -->
+    <meta name="email" content="niklas@lovable.dev">
+
+    <!-- ... existing code ... -->
   </head>
 
   <body>
@@ -39,12 +41,15 @@
       <partial name="step-2"></partial>
 
       <!-- This looks like a good place for an edge include. -->
+      <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-image-cdn"></netlify-edge-include>
+
 
       <section>
         <!-- Maybe an image or two will go here...? -->
       </section>
 
       <!-- This looks like another good place for an edge include! -->
+    </main>>
     </main>
 
     <!-- TODO: Extra credit: Why not add a global branded footer to the site? -->
