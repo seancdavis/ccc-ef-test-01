@@ -24,11 +24,11 @@
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 
     <!-- TODO: Add your name to enter the prize draw -->
-    <meta name="author" content="Niklas Vatn">
+    <meta name="author" content="Niklas Vatn" />
 
     <!-- TODO: Add your email and we'll show an avatar in the leaderboard. (And
     you'll get more points!) -->
-    <meta name="email" content="niklas@lovable.dev">
+    <meta name="email" content="niklas@lovable.dev" />
 
     <!-- ... existing code ... -->
   </head>
@@ -41,19 +41,26 @@
       <partial name="step-2"></partial>
 
       <!-- This looks like a good place for an edge include. -->
-      <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-image-cdn"></netlify-edge-include>
-
+      <netlify-edge-include
+        href="https://compose-challenge.netlify.app/partials/add-image-cdn"
+      ></netlify-edge-include>
 
       <section>
-        <img src="/.netlify/images/?url=/images/bay-bridge.jpg" alt="A photo of the Bay Bridge in San Francisco" />
-        <img src="/.netlify/images/?url=/images/bay-bridge.jpg&width=200" alt="A photo of the Bay Bridge in San Francisco" />
+        <img
+          src="/.netlify/images/?url=/images/bay-bridge.jpg"
+          alt="A photo of the Bay Bridge in San Francisco"
+        />
+        <img
+          src="/.netlify/images/?url=/images/bay-bridge.jpg&width=200"
+          alt="A photo of the Bay Bridge in San Francisco"
+        />
         <!-- Maybe an image or two will go here...? -->
       </section>
 
       <!-- This looks like another good place for an edge include! -->
       <netlify-edge-include href="https://compose-challenge.netlify.app/partials/add-blob-storage">
       </netlify-edge-include>
-      
+
       <section>
         <div class="panel">
           <button id="ccc-vote">Pick me, pick me!</button>
@@ -68,9 +75,10 @@
       </netlify-edge-include>
     </main>
 
-
     <!-- TODO: Extra credit: Why not add a global branded footer to the site? -->
-    <!-- <netlify-edge-include href="https://compose-challenge.netlify.app/partials/footer"></netlify-edge-include> -->
+    <footer>
+      <netlify-edge-include href="https://compose-challenge.netlify.app/partials/footer"></netlify-edge-include>
+    </footer>
 
     <script>
       const button = document.getElementById('ccc-vote');
@@ -82,6 +90,5 @@
         count.textContent = await response.text();
       });
     </script>
-    
   </body>
 </html>
